@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart</title>
+    <style>
+       #heart {
+          position: relative;
+          margin: auto;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgb(255, 255, 255);
+          height: 50px;
+          width: 50px;
+          transform:rotate(-45deg) ;
+      
+        }
+       
+
+       #heart::after {
+          background-color: rgb(238, 97, 121);
+          content: "";
+          border-radius: 50%;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          top: 0px;
+          left: 25px;
+        }
+        #heart::before {
+          content:"";
+          background-color: rgb(238, 97, 121);
+          border-radius: 50%;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          top: -25px;
+          left: 0px;
+        }
+      </style>
+      <script>
+       function changeHeadingBg(color){
+        var name=document.getElementById('heart');
+       var nu= window.getComputedStyle(heart,'::after');
+       name.style.background=color;
+    }
+
+      </script>
+</head>
+<body>
+<div width="200px" style="border: solid rgb(71, 8, 8) 2px;width:500px;margin: auto;padding: 5px;border-radius: 5px;">
+    <h1 style="text-align:center;">Click on the button to create heart</h1>
+    
+<button type="button" onclick="changeHeadingBg('rgb(238, 97, 121)');" style="border: none; background-color:hsl(308, 56%, 31%);text-align: center; padding:10px;border-radius: 8px;color:white;margin-left: 220px;">
+    Heart</button>
+    <section style="padding-top:50px ;   border: solid rgb(114, 113, 113) 1px;height: 100px;width:300px;margin: auto;margin-top: 20px;border-radius: 4px;">
+        <div id="heart"></div>
+        </section>
+    </div>
+</body>
+</html>
